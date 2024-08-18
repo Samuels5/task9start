@@ -42,7 +42,7 @@ const Part = async ({searchParams} : {
           <div className="border-b-2 border-gray-400 mr-8">
             <div className="text-3xl w-72 mb-2">About</div>
               <div className="flex mb-4">
-                <div><Image src='/public/end.png' alt='v' width={35} height={20}/></div>
+                <div><Image src='/pos.png' alt='v' width={35} height={20}/></div>
                 <div className="ml-4 w-28">
                   <div >Posted On</div>
                   <div>{jobs.data[num].datePosted}</div>
