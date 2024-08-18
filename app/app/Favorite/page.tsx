@@ -1,20 +1,26 @@
 "use client";
-
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import Cards from "./Cards";
-import Part from "./Part";
-import Link from "next/link";
-import Book from "./componet/Book";
-import axios from "axios";
+import React from "react";
 import { useCookies } from "next-client-cookies";
+import { useEffect } from "react";
+import { useState } from "react";
+import axios from "axios";
+import Cards from "../Cards";
+import Link from "next/link";
+import {useRouter} from "next/navigation"
 
-export default function New() {
+const Favorite = () => {
+  const router = useRouter();
   const cookies = useCookies();
   const [jobs, setjobs] = useState<any[]>([]);
   const [Loading, setLoading] = useState(true);
+  const [d, setd] = useState(true)
+
+  const handler = () => {setd(!d);
+    alert("hello")
+  }
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       try {
         const res = await axios.get(
@@ -34,15 +40,17 @@ export default function New() {
       }
     };
     fetchData();
-  }, []);
+  }, [d]);
 
   console.log(jobs);
+  if (Loading) {
+    return <div>loading...</div>;
+  }
 
-  const card = (
-    <div>
+  return (
+    <div className="pt-10 h-96 mx-14">
       {jobs.map((job, ind) => (
-        console.log(job),
-        <div key={ind} className="flex">
+        <div key={ind} className="flex-col mt-4">
           <Link
             href={{
               pathname: "/app/about",
@@ -53,29 +61,14 @@ export default function New() {
               },
             }}
           >
-            <Cards job={job} ind={ind} c={job.isBookmarked} st={'/app'}/>
+            {job.isBookmarked && (
+              <Cards job={job} ind={ind} c={job.isBookmarked} st='/app/Favorite' handler={handler}/>
+            )}
           </Link>
         </div>
       ))}
     </div>
   );
+};
 
-  return (
-    <div>
-      <div className="pl-[85px] pt-32 pr-[16rem]">
-        <div className="flex justify-between items-center">
-          <div>
-            <div className="font-black text-4xl">Opportunities</div>
-            <div className="font-extralight text-gray-400 pt-1">
-              Showing {jobs.length} results
-            </div>
-          </div>
-          <div className="">
-            Sort by: <strong>Most relevant</strong>
-          </div>
-        </div>
-        {card}
-      </div>
-    </div>
-  );
-}
+export default Favorite;
