@@ -7,7 +7,7 @@ import Book from "./componet/Book";
 
 const Cards = ({ job, ind, c, st, handler }: { job: any; ind: number; c : boolean, st:string, handler:any}) => {
 
-  console.log('s',job) 
+  // console.log('s',job) 
   return (
     <div className="p-6 rounded-3xl border my-9 border-gray-400 divide-black">
       <div className="  flex">

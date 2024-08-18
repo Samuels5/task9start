@@ -41,7 +41,7 @@ export default function New() {
   const card = (
     <div>
       {jobs.map((job, ind) => (
-        console.log(job),
+        // console.log(job),
         <div key={ind} className="flex">
           <Link
             href={{
@@ -53,7 +53,7 @@ export default function New() {
               },
             }}
           >
-            <Cards job={job} ind={ind} c={job.isBookmarked} st={'/app'}/>
+            <Cards job={job} ind={ind} c={job.isBookmarked} st={'/app'} handler={()=>{console.log('handler')}}/>
           </Link>
         </div>
       ))}

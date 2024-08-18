@@ -34,7 +34,7 @@ const Nav2 = () => {
           <div className="ml-2"> member</div>
         )}
       </div>
-      <Link href="/app/Favorite">Favorite</Link>
+      <Link className="text-xl font-bold text-blue-950 flex" href="/app/Favorite">Bookmarked</Link>
       <button
         className="mr-4 bg-blue-700 hover:bg-blue-900 text-xl p-5 text-white"
         onClick={() => {

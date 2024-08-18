@@ -15,8 +15,7 @@ const Favorite = () => {
   const [Loading, setLoading] = useState(true);
   const [d, setd] = useState(true)
 
-  const handler = () => {setd(!d);
-  }
+  const handler = () => {setd(!d);}
 
   useEffect(() => {
     setLoading(true);
