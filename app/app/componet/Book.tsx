@@ -5,7 +5,7 @@ import axios from "axios";
 import { useCookies } from "next-client-cookies";
 import { useRouter } from "next/navigation";
 
-const Book = ({ id, c, st, handler }: { id: number; c: boolean; st:string; handler:any }) => {
+const Book = ({ id, c, st, handler }: { id: number; c: boolean; st:string; handler:()=>void }) => {
   const router = useRouter();
   const cookies = useCookies();
   const [b, setb] = useState(c);
@@ -59,7 +59,8 @@ const Book = ({ id, c, st, handler }: { id: number; c: boolean; st:string; handl
     <button
       onClick={(e) => {
         e.preventDefault();
-        handler
+        fetchPost();
+        handler();
       }}
       className="w-5 "
     >

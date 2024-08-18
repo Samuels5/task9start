@@ -16,7 +16,6 @@ const Favorite = () => {
   const [d, setd] = useState(true)
 
   const handler = () => {setd(!d);
-    alert("hello")
   }
 
   useEffect(() => {
