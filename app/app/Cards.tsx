@@ -22,8 +22,8 @@ const Cards = ({ job, ind, c, st, handler }: { job: any; ind: number; c : boolea
             <h1 className="font-mono font-semibold text-2xl text-indigo-950">
               {job.title}
             </h1>
-                  {cookies.get("access-token") == undefined &&
-      status == "unauthenticated" ? (<div> </div>):(
+            {cookies.get("access-token") == undefined &&
+            status == "unauthenticated" ? (<div> </div>):(
             <Book id={job.id} c={c} st={st} handler={handler} />)}
           </div>
           <h4 className="font-extralight text-gray-400">
