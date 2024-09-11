@@ -14,11 +14,11 @@ steps for runing the up
 1, first clone the github repo using
 your terminal using the command
 
-`git clone https://github.com/Samuels5/g55app.git`
+`git clone https://github.com/Samuels5/task9start.git`
 
-2, then go to  g55app
+2, then go to  task9start
 
-`cd g55app`
+`cd task9start`
 
 3, then run the app using the comand
 
