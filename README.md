@@ -2,6 +2,8 @@ Name: samuel Mulugeta
 
 website: https://task9start.vercel.app/app
 
+figma link: https://www.figma.com/file/igmFo7dypzpuM02KJi8cay/Task-1?type=design&node-id=0%3A1&mode=design&t=FUZyVfl0w887g31l-1
+
 you can signup with your email or google account 
 
 if you don't want to signup with your email 
