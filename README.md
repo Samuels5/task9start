@@ -3,8 +3,11 @@ Name: samuel Mulugeta
 website: https://task9start.vercel.app/app
 
 you can signup with your email or google account 
+
 if you don't want to signup with your email 
-you can use "finicih622@ploncy.com" as email 
+
+you can use "finicih622@ploncy.com" as email and 
+
 you can use "s" as password
 
 steps for runing the up
